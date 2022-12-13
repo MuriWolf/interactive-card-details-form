@@ -1,0 +1,107 @@
+@use "../utilities/breakpoints" as bp;
+
+.l-card-details {
+    display: flex;
+    gap: 200px;
+    max-width: 1200px;
+    margin: 40px;
+    @include bp.for-size(medium) {
+        gap: 0;
+        margin: 20px;
+        flex-direction: column;
+    }
+}
+
+.card-details__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    gap: 2em;
+    position: relative;
+
+    & .card:first-child {
+        z-index: 2;  
+    }
+    & .card-back {
+        z-index: 1;   
+        left: 80px;
+    }
+    .card {
+        background: none;
+        position: relative;
+        z-index: 2;
+    }
+    .card-front {
+        position: relative; 
+        & > p, & > .card-logo {
+            position: absolute;
+            z-index: 5;
+        }
+        & > p {
+            color: var(--white);
+        }
+        .card-logo {
+            top: 10%;
+            left: 6%;
+            width: 20%;
+        }  
+        .card-number {
+            bottom: 30%;
+            letter-spacing: 3px;
+            transform: scale(0.9);
+            // font-size: calc( 16px + (24 - 16) * (100vw - 300px) / (449 - 300) );
+        }
+        .card-name {
+            left: 5%;
+            bottom: 11%;
+        }
+        .card-exp-date {
+            right: 5%;
+            bottom: 11%;
+        }
+        .card-name, .card-exp-date {
+            @include bp.for-size(medium) {
+                font-size: 1.4rem;
+            }
+            @include  bp.for-size(small) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .card-back {
+        position: relative;
+        .cvc-value {
+            position: absolute;
+            z-index: 2;
+            top: 46%;
+            right: 12%;
+            color: var(--white);
+        }
+    }
+
+    @include bp.for-size(medium) {
+        margin-bottom: 150px;
+        & .card-front, & .card-back {
+            width: 86%; 
+        }
+        & .card-front {
+            // position: absolute;
+            top: 50%;
+            top: 125px;
+        }
+        & .card-back {
+            // bottom: 100px; 
+            left: 40px;
+            position: absolute;
+        }
+    }
+}
+
+.card-details__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px;
+    height: 320px;
+}

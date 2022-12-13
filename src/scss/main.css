@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 500;
+  background: url("../../../images/bg-main-desktop.png") no-repeat;
+  background-size: 35vw 100vh;
+}
+@media (max-width: 902px) {
+  body {
+    background-size: 100vw 300px;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    background-size: 100vw 200px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--light-grayish-violet);
+  height: 1rem;
+  font-size: 1.8rem;
+  padding: 1em;
+  color: var(--Very-dark-violet);
+}
+input:focus, input:hover {
+  outline: 1px solid var(--Very-dark-violet);
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--Very-dark-violet);
+  font-weight: bold;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  --Red: hsl(0, 100%, 66%) // input errors ;
+}
+
+.l-card-details {
+  display: flex;
+  gap: 200px;
+  max-width: 1200px;
+  margin: 40px;
+}
+@media (max-width: 902px) {
+  .l-card-details {
+    gap: 0;
+    margin: 20px;
+    flex-direction: column;
+  }
+}
+
+.card-details__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: unset;
+  gap: 2em;
+  position: relative;
+}
+.card-details__cards .card:first-child {
+  z-index: 2;
+}
+.card-details__cards .card-back {
+  z-index: 1;
+  left: 80px;
+}
+.card-details__cards .card {
+  background: none;
+  position: relative;
+  z-index: 2;
+}
+.card-details__cards .card-front {
+  position: relative;
+}
+.card-details__cards .card-front > p, .card-details__cards .card-front > .card-logo {
+  position: absolute;
+  z-index: 5;
+}
+.card-details__cards .card-front > p {
+  color: var(--white);
+}
+.card-details__cards .card-front .card-logo {
+  top: 10%;
+  left: 6%;
+  width: 20%;
+}
+.card-details__cards .card-front .card-number {
+  bottom: 30%;
+  letter-spacing: 3px;
+  transform: scale(0.9);
+}
+.card-details__cards .card-front .card-name {
+  left: 5%;
+  bottom: 11%;
+}
+.card-details__cards .card-front .card-exp-date {
+  right: 5%;
+  bottom: 11%;
+}
+@media (max-width: 902px) {
+  .card-details__cards .card-front .card-name, .card-details__cards .card-front .card-exp-date {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 576px) {
+  .card-details__cards .card-front .card-name, .card-details__cards .card-front .card-exp-date {
+    font-size: 1.2rem;
+  }
+}
+.card-details__cards .card-back {
+  position: relative;
+}
+.card-details__cards .card-back .cvc-value {
+  position: absolute;
+  z-index: 2;
+  top: 46%;
+  right: 12%;
+  color: var(--white);
+}
+@media (max-width: 902px) {
+  .card-details__cards {
+    margin-bottom: 150px;
+  }
+  .card-details__cards .card-front, .card-details__cards .card-back {
+    width: 86%;
+  }
+  .card-details__cards .card-front {
+    top: 50%;
+    top: 125px;
+  }
+  .card-details__cards .card-back {
+    left: 40px;
+    position: absolute;
+  }
+}
+
+.card-details__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 400px;
+  height: 320px;
+}
+
+.btn {
+  padding: 0.75em;
+  font-size: 1.8rem;
+  background-color: var(--Very-dark-violet);
+  border-radius: 8px;
+  color: var(--white);
+  transition: all 0.35s ease;
+}
+.btn:hover {
+  color: var(--white);
+  background-color: var(--Very-dark-violet);
+  transform: scale(1.1);
+}/*# sourceMappingURL=main.css.map */

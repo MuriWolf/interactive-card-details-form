@@ -1,0 +1,50 @@
+@use "../utilities/breakpoints" as bp;
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 500;
+    background: url('../../../images/bg-main-desktop.png') no-repeat;
+    background-size: 35vw 100vh;
+    @include bp.for-size(medium) {
+        background-size: 100vw 300px;
+        align-items: flex-start;
+    }
+    @include bp.for-size(small) {
+        background-size: 100vw 200px;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+input {
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--light-grayish-violet);
+    height: 1rem;
+    font-size: 1.8rem;
+    padding: 1em;
+    color: var(--Very-dark-violet);
+    
+    &:focus, &:hover {
+        outline: 1px solid var(--Very-dark-violet);
+    }
+}
+
+label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--Very-dark-violet);
+    font-weight: bold;
+}
