@@ -6,7 +6,3 @@ $(document).ready(function () {
         $('.cvc-value').text($(this).val());
     });
 });
-
-// function isNumber(num) {
-//     if (typeof())
-// }  aaa
