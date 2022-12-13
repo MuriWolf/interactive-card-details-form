@@ -9,4 +9,8 @@ $(document).ready(function () {
 
 // function isNumber(num) {
 //     if (typeof())
+<<<<<<< Updated upstream
 // } 
+=======
+// }  aaa
+>>>>>>> Stashed changes
