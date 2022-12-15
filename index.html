@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- codigo bonitinho do man -->
+  <!-- https://coderwww.github.io/Mentor-Interactive-cxxd-details-form/ -->
+
+  <!-- Espacos dentro do input -->
+  <!-- https://stackoverflow.com/questions/52280953/automatic-number-space-in-the-input-form -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -15,7 +20,7 @@
       <div class="card-front">
         <img class="card" src="images/bg-card-front.png" alt="">
         <img class="card-logo" src="images/card-logo.svg" alt="">
-        <p class="card-number">0000 0000 0000 0000</p>
+        <p class="card-number"><span class="card-number-1">0000</span> <span class="card-number-2">0000</span> <span class="card-number-3">0000</span> <span class="card-number-4">0000</span></p>
         <p class="card-name">Jane Applessed</p>
         <p class="card-exp-date">00/00</p>
       </div>
@@ -32,19 +37,20 @@
         </div>
         <div>
           <label for="">card number</label>
-          <input type="text" id="" placeholder="e.g. 1234 5678 9123 0000">
+          <!-- <input type="text" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" pattern="[0-9 ]{19}"> -->
+          <input type="text" name="c-number" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" pattern="[0-9 ]{19}" maxlength="19" required="" class="edited">
         </div>
         <div class="d-flex gap-4">
           <div class="w-100">
             <label for="">exp. date (mm/yy)</label>
             <div class="d-flex gap-3">
-              <input type="text" id="" placeholder="MM">
-              <input type="text" id="" placeholder="YY">
+              <input type="text" id="expMonth" placeholder="MM" maxlength="2" minlength="2">
+              <input type="text" id="expYear" placeholder="YY" maxlength="2" minlength="2">
             </div>
           </div>
           <div class="w-100">
             <label for="">cvc</label>
-            <input type="number" id="cvc" placeholder="e.g. 123">
+            <input type="text" id="cvc" placeholder="e.g. 123" maxlength="3">
           </div>
         </div>
         <button class="btn" type="submit">Confirm</button>
