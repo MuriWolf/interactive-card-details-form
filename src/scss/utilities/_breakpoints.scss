@@ -1,5 +1,5 @@
 @mixin for-size($range) {
-    $medium: 902px;
+    $medium: 1010px;
     $small: 576px;
     
     @if $range == large {

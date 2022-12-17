@@ -2,9 +2,13 @@
 
 .l-card-details {
     display: flex;
-    gap: 200px;
+    width: 90%;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 40px;
+    & > * {
+        flex: 1;
+    }
     @include bp.for-size(medium) {
         gap: 0;
         margin: 20px;
@@ -24,15 +28,20 @@
     }
     & .card-back {
         z-index: 1;   
-        left: 80px;
     }
     .card {
+        border: none;
         background: none;
         position: relative;
         z-index: 2;
     }
+    .card-front, .card-back {
+        border-radius: 10px;
+        overflow: hidden;
+    }
     .card-front {
         position: relative; 
+        align-self: flex-start;
         & > p, & > .card-logo {
             position: absolute;
             z-index: 5;
@@ -48,10 +57,14 @@
         .card-number {
             bottom: 30%;
             letter-spacing: 3px;
-            transform: scale(0.9);
-            // font-size: calc( 16px + (24 - 16) * (100vw - 300px) / (449 - 300) );
+            left: 5%;
+            font-size: 3.15rem;
+            @include bp.for-size(medium) {
+                font-size: 1.8rem;
+            }
         }
         .card-name {
+            font-size: 1.4rem;
             left: 5%;
             bottom: 11%;
         }
@@ -61,15 +74,16 @@
         }
         .card-name, .card-exp-date {
             @include bp.for-size(medium) {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
             }
             @include  bp.for-size(small) {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
         }
     }
 
     .card-back {
+        align-self: flex-end;
         position: relative;
         .cvc-value {
             position: absolute;
@@ -77,23 +91,29 @@
             top: 46%;
             right: 12%;
             color: var(--white);
+            font-size: 1.4rem;
+            @include bp.for-size(medium) {
+                top: 45%;
+                font-size: 1.2rem;
+            }
+
         }
     }
 
     @include bp.for-size(medium) {
         margin-bottom: 150px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 350px;
         & .card-front, & .card-back {
-            width: 86%; 
+            max-width: 280px;
         }
         & .card-front {
-            // position: absolute;
-            top: 50%;
             top: 125px;
         }
         & .card-back {
-            // bottom: 100px; 
-            left: 40px;
-            position: absolute;
+            bottom: 175px; 
+            position: relative;
         }
     }
 }

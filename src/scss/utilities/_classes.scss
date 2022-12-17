@@ -1,0 +1,14 @@
+.error {
+    outline: 1px solid var(--red) !important;
+}
+
+.error-message {
+    display: block;
+    color: var(--red);
+    font-size: 0.70em;
+    margin-top: 0.9em;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}

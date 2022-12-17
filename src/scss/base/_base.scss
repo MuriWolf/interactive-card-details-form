@@ -13,16 +13,13 @@ body {
     background: url('../../../images/bg-main-desktop.png') no-repeat;
     background-size: 35vw 100vh;
     @include bp.for-size(medium) {
-        background-size: 100vw 300px;
-        align-items: flex-start;
-    }
-    @include bp.for-size(small) {
         background-size: 100vw 200px;
+        align-items: flex-start;
     }
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
 input {
