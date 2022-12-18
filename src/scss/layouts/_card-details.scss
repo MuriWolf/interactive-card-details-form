@@ -22,6 +22,7 @@
     align-items: unset;
     gap: 2em;
     position: relative;
+    max-width: 530px;
 
     & .card:first-child {
         z-index: 2;  
@@ -96,7 +97,6 @@
                 top: 45%;
                 font-size: 1.2rem;
             }
-
         }
     }
 
@@ -123,5 +123,5 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 400px;
-    height: 320px;
+    height: 360px;
 }

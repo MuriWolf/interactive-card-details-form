@@ -57,7 +57,7 @@ function checkError(el, size) {
 function toggleError(el, error, errorMessage) {
     if(error) {
         $(el).addClass("error");
-        $(el).after(`<span class='error-message'>${errorMessage}</span>`);
+        $(el).after(`<span class='error-message d-block'>${errorMessage}</span>`);
     } else {
         $(el).siblings("span").empty();
         $(el).removeClass("error");

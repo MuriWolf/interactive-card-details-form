@@ -105,12 +105,21 @@ img {
 input {
   display: block;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid var(--light-grayish-violet);
   height: 1rem;
   font-size: 1.8rem;
-  padding: 1em;
+  padding: 1.15em 0.8em;
   color: var(--Very-dark-violet);
+}
+input::-moz-placeholder {
+  color: var(--light-grayish-violet);
+}
+input:-ms-input-placeholder {
+  color: var(--light-grayish-violet);
+}
+input::placeholder {
+  color: var(--light-grayish-violet);
 }
 input:focus, input:hover {
   outline: 1px solid var(--Very-dark-violet);
@@ -120,7 +129,7 @@ label {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1.2rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   color: var(--Very-dark-violet);
   font-weight: bold;
 }
@@ -172,6 +181,7 @@ label {
   align-items: unset;
   gap: 2em;
   position: relative;
+  max-width: 530px;
 }
 .card-details__cards .card:first-child {
   z-index: 2;
@@ -277,7 +287,7 @@ label {
   flex-direction: column;
   justify-content: space-between;
   max-width: 400px;
-  height: 320px;
+  height: 360px;
 }
 
 .btn {
