@@ -25,29 +25,29 @@
       </div>  
     </div>
     <div class="d-flex justify-content-center align-items-center">
-      <form class="card-details__form">
+      <form class="card-details__form" action="/">
         <div>
-          <label for="">cardholder name</label>
+          <label for="name">cardholder name</label>
           <input type="text" id="name" placeholder="e.g. Jane Applessed" maxlength="32" pattern="[a-zA-Z \\.]+" required>
         </div>
         <div>
-          <label for="">card number</label>
+          <label for="cardNumber">card number</label>
           <input type="text" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" pattern="[0-9 ]{19}" maxlength="19" required>
         </div>
         <div class="d-flex gap-4">
           <div class="w-100">
-            <label for="">exp. date (mm/yy)</label>
+            <label for="expMonth">exp. date (mm/yy)</label>
             <div class="d-flex gap-3">
               <div>
-                <input type="text" id="expMonth" placeholder="MM" maxlength="2" pattern="[0-9]{2}" max="12" required>
+                <input type="text" id="expMonth" placeholder="MM" maxlength="2" pattern="[0-9]{2}" required>
               </div>
               <div>
-                <input type="text" id="expYear" placeholder="YY" maxlength="2" pattern="[0-9]{2}" max="99" required>
+                <input type="text" id="expYear" placeholder="YY" maxlength="2" pattern="[0-9]{2}" required>
               </div>
             </div>
           </div>
           <div class="w-100">
-            <label for="">cvc</label>
+            <label for="cvc">cvc</label>
             <input type="text" id="cvc" placeholder="e.g. 123" maxlength="3" pattern="[0-9]{3}" required>
           </div>
         </div>
